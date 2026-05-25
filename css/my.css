@@ -1,0 +1,945 @@
+/* Here is your custom css styles. */
+/* Matery 首页 banner 遮罩层 */
+.carousel-item::before,
+.carousel-item::after,
+.index-cover::before,
+.index-cover::after {
+    background: transparent !important;
+}
+
+
+/* ========== 自定义主题色 ========== */
+
+.bg-color,
+.page-footer {
+    background: linear-gradient(120deg, #0f4c81 0%, #5b3f8c 50%, #8e4d9f 100%) !important;
+}
+
+nav {
+    background: rgba(20, 35, 80, 0.6) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: none !important;
+}
+
+.navbar-fixed nav {
+    background: rgba(20, 35, 80, 0.6) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: none !important;
+}
+
+.top-scroll,
+.btn-floating {
+    background: linear-gradient(120deg, #0f4c81 0%, #8e4d9f 100%) !important;
+}
+
+a {
+    color: #5b3f8c;
+}
+
+a:hover {
+    color: #8e4d9f;
+}
+
+
+/* 删除右下角返回顶部箭头 */
+.top-scroll {
+    display: none !important;
+}
+
+/* 删除页面最下方绿色线条 */
+.progress-bar {
+    display: none !important;
+}
+
+/* 如果底部仍有绿色边线，再强制去掉页脚边框 */
+.page-footer {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* 修改右上角 GitHub 角标颜色 */
+.github-corner svg {
+    fill: #5b3f8c !important;
+    color: #ffffff !important;
+}
+
+/* 鼠标悬停颜色 */
+.github-corner:hover svg {
+    fill: #8e4d9f !important;
+}
+
+/* 隐藏顶部导航栏搜索按钮 */
+.search-button,
+#searchIcon,
+.nav-search,
+.fa-search {
+    display: none !important;
+}
+
+/* 去掉 About 页面顶部背景图的紫色遮罩 */
+.bg-cover::before,
+.bg-cover::after,
+.index-cover::before,
+.index-cover::after,
+.carousel-item::before,
+.carousel-item::after {
+    background: transparent !important;
+}
+
+/* 只调整 About 页面顶部背景高度，不影响首页 */
+body:has(.profile) .bg-cover {
+    height: 380px !important;
+    min-height: 380px !important;
+}
+
+/* About 页面顶部不显示 Life 和打字文字 */
+body:has(.profile) .bg-cover .title,
+body:has(.profile) .bg-cover .description,
+body:has(.profile) #subtitle {
+   transform: translateY(-18px) !important;
+
+}
+
+/* About me 页面头像缩小 */
+.about-container .avatar-img,
+#aboutme .avatar-img {
+    width: 130px !important;
+    height: 160px !important;
+    object-fit: cover !important;
+}
+
+
+/* 只替换 About 页面顶部背景图 */
+body:has(.profile) .bg-cover {
+    background-image: url('/medias/banner/1.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* About 页面个人简介文字加宽 */
+.profile .introduction,
+.profile .introduction p,
+.card .introduction {
+    max-width: 900px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    line-height: 1.9 !important;
+    font-size: 17px !important;
+}
+
+/* My Projects 两个项目居中显示 */
+.my-projects .row,
+#myProjects .row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 120px !important;
+    flex-wrap: wrap !important;
+}
+
+/* 每个项目卡片宽度固定，文字居中 */
+.my-projects .col,
+#myProjects .col {
+    float: none !important;
+    width: 360px !important;
+    max-width: 360px !important;
+    text-align: center !important;
+}
+
+/* My Videos 两个视频并排展示 */
+.video-card-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 50px !important;
+    flex-wrap: nowrap !important;
+    margin-top: 40px !important;
+}
+
+/* 每个视频卡片宽度 */
+.video-card-row .col {
+    float: none !important;
+    width: 430px !important;
+    max-width: 430px !important;
+    padding: 0 !important;
+}
+
+/* 视频卡片样式 */
+.video-card {
+    display: block !important;
+    width: 430px !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    background: #fff !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16) !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+/* 封面图 */
+.video-card img {
+    width: 100% !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* 视频标题 */
+.video-title {
+    padding: 18px 20px !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #34495e !important;
+    text-align: center !important;
+}
+
+/* 鼠标悬停效果 */
+.video-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* 首页顶部背景图替换 */
+.index-cover,
+.carousel.carousel-slider .carousel-item {
+    background-image: url('/medias/banner/9.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+
+/* 去掉默认紫色滤镜，保留轻微暗色遮罩 */
+.index-cover::before,
+.index-cover::after,
+.carousel-item::before,
+.carousel-item::after {
+    background: rgba(0, 0, 0, 0.18) !important;
+}
+
+/* 只替换 Awards 页面的顶部背景图 */
+body:has(.awards-container) .bg-cover {
+    background-image: url('/medias/banner/10.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* 只调整 Awards 页面的顶部高度，让它小一些 */
+body:has(.awards-container) .bg-cover {
+    height: 42vh !important;
+    min-height: 300px !important;
+}
+
+/* Awards 页面背景遮罩淡一点 */
+body:has(.awards-container) .bg-cover::before,
+body:has(.awards-container) .bg-cover::after {
+    background: rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* 只替换 Research 页面的顶部背景图 */
+body:has(.research-container) .bg-cover {
+    background-image: url('/medias/banner/11.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    height: 42vh !important;
+    min-height: 300px !important;
+}
+
+
+/* About 页面顶部 Posts / Categories / Tags 只展示，不允许点击跳转 */
+.post-statis a {
+    pointer-events: none !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* 文章卡片右下角作者样式 */
+.post-card-author {
+    color: #34495e;
+    font-weight: 500;
+}
+
+
+/* 首页/归档文章卡片右下角：隐藏分类 Essays，显示作者 Ljk */
+.article-category,
+.article-category-link,
+.post-category,
+.category-link {
+    display: none !important;
+}
+
+/* 在右下角补一个作者 Ljk */
+.card .card-content .right::after,
+.article .card-content .right::after,
+.index-card .card-content .right::after {
+    content: "Ljk" !important;
+    color: #34495e !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+}
+
+/* 把原来的书签图标改成用户图标的视觉效果不太方便，这里只保留原图标 */
+.card .card-content .right i,
+.article .card-content .right i,
+.index-card .card-content .right i {
+    margin-right: 6px !important;
+    color: #34495e !important;
+}
+
+/* 只修改文章底部 tag 标签文字颜色 */
+.tag_share .chip,
+.tag_share .chip a {
+    color: #ffffff !important;
+}
+
+/* My Videos：电脑端两个视频并排 */
+.video-card-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 70px !important;
+    flex-wrap: nowrap !important;
+}
+
+/* 每个视频卡片 */
+.video-card-row .col,
+.video-card {
+    width: 430px !important;
+    max-width: 430px !important;
+}
+
+/* My Videos：手机端强制上下排列 */
+@media screen and (max-width: 768px) {
+    .video-card-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 28px !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .video-card-row .col {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .video-card {
+        width: 92% !important;
+        max-width: 92% !important;
+        margin: 0 auto !important;
+    }
+
+    .video-card img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    .video-title {
+        font-size: 18px !important;
+        padding: 14px 10px !important;
+    }
+}
+
+/* ================= Research 页面手机端统一适配 ================= */
+@media screen and (max-width: 768px) {
+
+    /* 整体容器 */
+    .research-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 25px auto !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 时间轴 */
+    .research-timeline {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .research-timeline::before {
+        left: 42px !important;
+        width: 3px !important;
+    }
+
+    /* 每一年整体 */
+    .research-year-block {
+        display: flex !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        margin-bottom: 36px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 左侧年份圆圈 */
+    .research-year {
+        width: 70px !important;
+        height: 70px !important;
+        min-width: 70px !important;
+        margin-right: 14px !important;
+        font-size: 20px !important;
+        border-width: 4px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 关键：所有右侧内容统一宽度 */
+    .research-year-block > .research-content,
+    .research-year-block > .research-content-list {
+        flex: 1 1 auto !important;
+        width: calc(100% - 84px) !important;
+        max-width: calc(100% - 84px) !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 关键：2025 里面的两个子模块也必须撑满 */
+    .research-content-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 26px !important;
+    }
+
+    .research-content-list > .research-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 白色卡片统一样式 */
+    .research-content {
+        padding: 18px 16px !important;
+        border-radius: 16px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    /* 论文卡片手机端上下排列 */
+    .paper-card {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        width: 100% !important;
+        padding-bottom: 18px !important;
+        margin-bottom: 18px !important;
+        box-sizing: border-box !important;
+    }
+
+    .paper-image-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 论文图片撑满当前白色卡片 */
+    .paper-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Under Review 占位图也撑满 */
+    .paper-placeholder {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 170px !important;
+        min-height: 170px !important;
+        box-sizing: border-box !important;
+    }
+
+    .paper-placeholder-text {
+        font-size: 20px !important;
+        line-height: 1.45 !important;
+    }
+
+    .paper-badge {
+        width: auto !important;
+        max-width: 55% !important;
+        display: inline-block !important;
+        padding: 8px 5px !important;
+        border-radius: 0 0 10px 0 !important;
+        line-height: 1.35 !important;
+        white-space: normal !important;
+        text-align: left !important;
+
+        font-size: 11px !important;
+        letter-spacing: 0.2px !important;
+    }
+
+    /* 论文标题与文字缩小，避免挤压 */
+    .paper-title {
+        font-size: 14px !important;
+        line-height: 1.45 !important;
+        margin-bottom: 10px !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .paper-authors {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 8px !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .paper-venue {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 12px !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .paper-btn,
+    .status-btn {
+        font-size: 13px !important;
+        padding: 5px 14px !important;
+    }
+
+    /* 简介文字 */
+    .research-section {
+        margin-top: 18px !important;
+    }
+
+    .research-section-title {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .research-text {
+        font-size: 14px !important;
+        line-height: 1.75 !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* 大创项目模块 */
+    .project-section {
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .project-meta {
+        font-size: 13px !important;
+        font-family: "Times New Roman", Times, serif !important;
+    }
+}
+
+/* ================= 手机端：首页/顶部标题文字缩小 ================= */
+@media screen and (max-width: 768px) {
+
+    /* 首页大标题：All of my life. */
+    .bg-cover .title,
+    .carousel .title,
+    .index-cover .title {
+        font-size: 42px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+    }
+
+    /* 首页副标题：从来没有真正的绝境... */
+    .bg-cover .description,
+    .bg-cover #subtitle,
+    .carousel .description,
+    .index-cover .description,
+    #subtitle {
+        font-size: 17px !important;
+        line-height: 1.6 !important;
+        white-space: nowrap !important;
+    }
+
+}
+
+/* ================= 手机端：隐藏导航栏 Ljk 前面的头像 ================= */
+@media screen and (max-width: 768px) {
+    .brand-logo img,
+    .nav-logo img,
+    #logo-container img,
+    .navbar-fixed img {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidenav .user-view,
+    .mobile-head {
+        min-height: 100px !important;
+        padding-top: 30px !important;
+        padding-bottom: 10px !important;
+        overflow: visible !important;
+    }
+
+    .sidenav .user-view .name,
+    .mobile-head .title {
+        font-size: 22px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .sidenav .user-view .email,
+    .mobile-head .subtitle {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        white-space: normal !important;
+    }
+}
+
+
+
+/* ================= 首页按钮颜色强制覆盖 ================= */
+
+/* 默认状态 */
+.carousel .cover-btns a,
+.carousel .cover-btns .btn,
+.cover-btns a,
+.cover-btns .btn {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 1.5px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+/* 悬停、点击、聚焦状态：改成紫蓝色 */
+.carousel .cover-btns a:hover,
+.carousel .cover-btns a:active,
+.carousel .cover-btns a:focus,
+.carousel .cover-btns .btn:hover,
+.carousel .cover-btns .btn:active,
+.carousel .cover-btns .btn:focus,
+.cover-btns a:hover,
+.cover-btns a:active,
+.cover-btns a:focus,
+.cover-btns .btn:hover,
+.cover-btns .btn:active,
+.cover-btns .btn:focus {
+    background: linear-gradient(135deg, #5b6ee1, #8e6ad8) !important;
+    background-color: #6c63ff !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: 0 6px 18px rgba(108, 99, 255, 0.35) !important;
+}
+
+
+/* ================= 手机端：修复文章底部分享图标溢出 ================= */
+@media screen and (max-width: 768px) {
+
+    /* 文章底部作者、链接、转载说明区域 */
+    .reprint,
+    .reprint-statement,
+    .post-reprint,
+    .article-reprint {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        padding: 18px 16px !important;
+    }
+
+    /* 文章底部分享区域整体 */
+    .social-share,
+    .post-share,
+    .share-icons,
+    .article-share {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin: 14px auto 0 auto !important;
+        padding: 0 8px !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    /* 单个分享图标 */
+    .social-share a,
+    .post-share a,
+    .share-icons a,
+    .article-share a {
+        width: 34px !important;
+        height: 34px !important;
+        line-height: 34px !important;
+        margin: 3px !important;
+        flex: 0 0 auto !important;
+        font-size: 16px !important;
+    }
+
+    /* 防止文章底部整个卡片横向溢出 */
+    .card,
+    .card-content,
+    .post-content,
+    .article-content {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+}
+
+
+/* ================= About 页面手机端头像显示修复 ================= */
+@media screen and (max-width: 768px) {
+
+    /* About 页面白色卡片不要裁剪头像 */
+    #aboutme,
+    .about-container,
+    #aboutme .card,
+    .about-container .card,
+    #aboutme .card-content,
+    .about-container .card-content {
+        overflow: visible !important;
+    }
+
+    /* About 页面卡片位置稍微下移，避免压住头像 */
+    #aboutme.about-container,
+    .about-container {
+        margin-top: -70px !important;
+    }
+
+    /* 头像外层区域 */
+    #aboutme .profile .avatar,
+    .about-container .profile .avatar {
+        width: 150px !important;
+        height: 150px !important;
+        margin: -75px auto 28px auto !important;
+        position: relative !important;
+        z-index: 20 !important;
+        overflow: visible !important;
+    }
+
+    /* 头像图片本身 */
+    #aboutme .avatar-img,
+    .about-container .avatar-img {
+        width: 130px !important;
+        height: 157px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        position: relative !important;
+        z-index: 21 !important;
+        display: block !important;
+    }
+
+    /* 白色卡片顶部留出头像空间 */
+    #aboutme .profile,
+    .about-container .profile {
+        padding-top: 60px !important;
+    }
+}
+
+
+
+
+
+
+
+/* ================= 首页快捷导航按钮：电脑横排，手机 2×2 ================= */
+
+/* 隐藏原来的 START 和 GITHUB */
+.cover-btns {
+    display: none !important;
+}
+
+/* 电脑端：四个按钮横排 */
+.home-quick-nav {
+    width: 70%;
+    max-width: 760px;
+    margin: 42px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    z-index: 20;
+    animation: quickNavFloat 3s ease-in-out infinite;
+}
+
+.home-quick-nav a {
+    min-width: 135px;
+    height: 46px;
+    padding: 0 20px;
+    border-radius: 999px;
+    border: 1.4px solid rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    color: #ffffff !important;
+    text-decoration: none !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    box-shadow: 0 8px 22px rgba(25, 35, 90, 0.22);
+    transition: all 0.25s ease;
+}
+
+.home-quick-nav a i {
+    font-size: 16px;
+}
+
+.home-quick-nav a:hover,
+.home-quick-nav a:active,
+.home-quick-nav a:focus {
+    background: linear-gradient(135deg, #6c63ff, #9b5de5) !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(108, 99, 255, 0.36);
+}
+
+@keyframes quickNavFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 手机端：2×2 排列 */
+@media screen and (max-width: 768px) {
+    .home-quick-nav {
+        width: 82% !important;
+        max-width: none !important;
+        margin: 36px auto 0 auto !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+    }
+
+    .home-quick-nav a {
+        min-width: 0 !important;
+        width: 100% !important;
+        height: 48px !important;
+        padding: 0 8px !important;
+        font-size: 14px !important;
+        gap: 7px !important;
+    }
+
+    .home-quick-nav a i {
+        font-size: 15px !important;
+    }
+}
+
+
+
+
+/* ================= 手机端：首页隐藏 START 和 GITHUB，只显示快捷导航 ================= */
+@media screen and (max-width: 768px) {
+
+    /* 隐藏原来的 START / GITHUB 两个大按钮 */
+    .cover-btns {
+        display: none !important;
+    }
+
+    /* 快捷导航整体位置 */
+    .mobile-quick-nav {
+        width: 86% !important;
+        margin: 38px auto 0 auto !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        position: relative !important;
+        z-index: 20 !important;
+        animation: quickNavFloat 3s ease-in-out infinite;
+    }
+
+    /* 单个按钮 */
+    .mobile-quick-nav a {
+        height: 46px !important;
+        border-radius: 999px !important;
+        border: 1.3px solid rgba(255, 255, 255, 0.82) !important;
+        background: rgba(255, 255, 255, 0.14) !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 7px !important;
+
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.2px !important;
+
+        box-shadow: 0 8px 22px rgba(25, 35, 90, 0.22) !important;
+        transition: all 0.25s ease !important;
+    }
+
+    .mobile-quick-nav a i {
+        font-size: 15px !important;
+    }
+
+    /* 点击 / 悬停效果 */
+    .mobile-quick-nav a:hover,
+    .mobile-quick-nav a:active,
+    .mobile-quick-nav a:focus {
+        background: linear-gradient(135deg, #6c63ff, #9b5de5) !important;
+        border-color: transparent !important;
+        color: #ffffff !important;
+        transform: translateY(-3px) !important;
+        box-shadow: 0 10px 26px rgba(108, 99, 255, 0.36) !important;
+    }
+
+    /* Essays 最后一项居中铺满 */
+    .mobile-quick-nav a:nth-child(5) {
+        grid-column: 1 / 3 !important;
+        width: 60% !important;
+        margin: 0 auto !important;
+    }
+
+    @keyframes quickNavFloat {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
